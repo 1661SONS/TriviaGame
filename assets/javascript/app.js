@@ -123,90 +123,183 @@ $(document).ready( function(){
         answer: 'C. Black Panther Party for Self-Defense'
     }
     var q15 = {
-        question: 'How many urban centers across the US did the Black Panther Party have?',
-        choices: ['A. ', 'B. ', 'C. ', 'D. thirteen'],
-        flags: [],
-        answer: 'D. thirteen'
+        question: "Which was the Black Panther Party's furthest urban center?",
+        choices: ['A. Los Angeles', 'B. Chicago', 'C. Philadelphia', 'D. New York'],
+        flags: [false, false, false, true],
+        answer: 'D. New York'
     }
     var q16 = {
-        question: '',
-        choices: ['A. ', 'B. ', 'C. ', 'D. '],
-        flags: [],
-        answer: ''
+        question: "How many points did the Black Panther Party's social programs follow?",
+        choices: ['A. 10 Points', 'B. 5 Points', 'C. 3 Points', 'D. 7 Points'],
+        flags: [true, false, false, false],
+        answer: 'A. 10 Points'
     }
     var q17 = {
-        question: '',
-        choices: ['A. ', 'B. ', 'C. ', 'D. '],
-        flags: [],
-        answer: ''
+        question: 'What kind of ideology did the Black Panther Party follow?',
+        choices: ['A. Communist', 'B. Marxist', 'C. Capitalist', 'D. Anarchist'],
+        flags: [false, true, false, false],
+        answer: 'B. Marxist'
     }
     var q18 = {
-        question: '',
-        choices: ['A. ', 'B. ', 'C. ', 'D. '],
-        flags: [],
-        answer: ''
+        question: 'What kind of free services did the Black Panthers run for children?',
+        choices: ['A. free breakfast', 'B. free mentoring', 'C. free weapons training', 'D. free books'],
+        flags: [true, false, false, false],
+        answer: 'A. free breakfast'
     }
     var q19 = {
-        question: '',
-        choices: ['A. ', 'B. ', 'C. ', 'D. '],
-        flags: [],
-        answer: ''
+        question: 'What kind of free services did the Black Panthers run for the community?',
+        choices: ['A. free library', 'B. free clothing drive', 'C. free jobs training', 'D. free health clinics'],
+        flags: [false, false, false, true],
+        answer: 'D. free health clinics'
     }
     var q20 = {
-        question: '',
-        choices: ['A. ', 'B. ', 'C. ', 'D. '],
-        flags: [],
-        answer: ''
+        question: 'How many free health clinics did the Black Panthers operate?',
+        choices: ['A. ', 'B. ', 'C. thirteen', 'D. '],
+        flags: [false, false, true, false],
+        answer: 'C. thirteen'
     }
+    var q21 = {
+        question: 'When did the FBI declare the Black Panther Party an emeny of the US Govenment?',
+        choices: ['A. 1966', 'B. 1969', 'C. 1968', 'D. 1970'],
+        flags: [false, true, false, false],
+        answer: 'B. 1969'
+    }
+    var q22 = {
+        question: "Who called the Black Panther Party 'one of the greatest threats to nation's internal security?",
+        choices: ['A. J. Edgar Hoover', 'B. Harry S. Truman', 'C. Byron Todd Jones', 'D. Rex D. Davis'],
+        flags: [true, false, false, false],
+        answer: 'A. J. Edgar Hoover'
+    }
+    var q23 = {
+        question: 'Who shot and killed Black Panther Party members as they slept?',
+        choices: ['A. rogue FBI agents', 'B. jealous BPP members', 'C. trained assassins', 'D. Chicago PD'],
+        flags: [false, false, false, true],
+        answer: 'D. Chicago PD'
+    }
+    var q24 = {
+        question: 'Who were the Black Panther Party members shot and killed as they slept?',
+        choices: ['A. Fred Hampton & Bobby Seale', 'B. Fred Hampton & Eldridge Cleaver', 'C. Fred Hampton & Mark Clark', 'D. Fred Hampton & Stokely Carmichael'],
+        flags: [false, false, true, false],
+        answer: 'C. Fred Hampton & Mark Clark'
+    }
+    var q25 = {
+        question: "Around 100 bullets were fired in this 'fierce gun battle' with police. How many were fired by Black Panthers?",
+        choices: ['A. none', 'B. about half', 'C. just one', 'D. all 100'],
+        flags: [false, false, true, false],
+        answer: 'C. just one'
+    }
+    var q26 = {
+        question: 'When did the Black Panther Party dissolve?',
+        choices: ['A. 1982', 'B. 1969', 'C. 1980', 'D. 1972'],
+        flags: [true, false, false, false],
+        answer: '1982'
+    }
+
+    var questionArray = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26];
+
+    function loadQuestion(questionSelection) {
+        console.log(questionSelection);
+        countdownTimer.reset();
+        $(".question").html("<h3>" + questionArray[questionSelection].question + "</h3>");
+        $("#buttonA").text(questionArray[questionSelection].choices[0]).show();
+        $("#buttonB").text(questionArray[questionSelection].choices[1]).show();
+        $("#buttonC").text(questionArray[questionSelection].choices[2]).show();
+        $("#buttonD").text(questionArray[questionSelection].choices[3]).show();
+    }
+
+    function setup() {
+        index = 0;
+        $('.question').append('<button id="startButton">Start</button>');
+        $('#startButton').on('click', function() {
+            $(this).hide();
+            countdownTimer.start();
+            loadQuestion(index);
+        });
+    }
+
+    function getAnswer() {
+        $('.answerchoice').on('click', function() {
+            console.log('alert', index);
+            index++;
+            console.log('click', index);
+            $(".question").text('');
+            $("#buttonA").text('');
+            $("#buttonB").text('');
+            $("#buttonC").text('');
+            $("#buttonD").text('');
+            loadQuestion();
+        })
+    }
+
+    function answerCorrect() {
+        correct++;
+        alert("Correct!");
+        console.log("correct");
+    }
+
+    function answerWrong() {
+        wrong++;
+        alert("Incorrect!");
+        console.log("wrong");
+    }
+
+    function showScore() {
+        $('.question').empty();
+        $('.question').append("<h2><p>" + correct + " correct</p></h2>");
+        $('.question').append("<h2><p>" + wrong + " incorrect</p></h2>");
+        countdownTimer.stop();
+        $('.timer').empty();
+    }
+    setup();    
+
+    $('.answerchoice').on('click', function() {
+        console.log($(this));
+        if(this.id == 'buttonA') {
+            var answerChosen = 'A';
+        } else if(this.id == 'buttonB') {
+            answerChosen = 'B';
+        } else if (this.id == 'buttonC') {
+            answerChosen = 'C';
+        } else if (this.id == 'buttonD') {
+            answerChosen = 'D';
+        } 
+        if ((answerChosen == 'A') && (questionArray[index].flags[0] == true)) {
+            answerCorrect();
+        } else if (answerChosen == 'A') {
+            answerWrong();
+        }
+        if ((answerChosen == 'B') && (questionArray[index].flags[1] == true)) {
+            answerCorrect();
+        } else if (answerChosen == 'B') {
+            answerWrong();
+        }
+       if ((answerChosen == 'C') && (questionArray[index].flags[2] == true)) {
+            answerCorrect();
+        } else if (answerChosen == 'C') {
+            answerWrong();
+        }
+       if ((answerChosen == 'D') && (questionArray[index].flags[3] == true)) {
+            answerCorrect();
+        } else if (answerChosen == 'D') {
+            answerWrong();
+        }
+       
+        $(".question").text('');
+        $("#buttonA").text('');
+        $("#buttonB").text('');
+        $("#buttonC").text('');
+        $("#buttonD").text('');
+        index++;
+        if (index < questionArray.length) {
+            loadQuestion(index);
+        } else {
+            $(".answerchoice").hide();
+            showScore();
+        }
+       });
+       
+       });
     
-
-
-    // create an array of trivia questions
-    var questions = [
-        
-        "",
-        "",
-        "",
-        "",
-        "",
-        "How many points did the Black Panther Party's social programs go by?",
-        "What kind of ideology did the Black Panther Party follow?",
-        "What kind of free services did the Black Panthers run for children?",
-        "What kind of free services did the Black Panthers run for the community?",
-        "How many free health clinics did the Black Panthers operate?",
-        "When did the FBI declare the Black Panther Party an emeny of the US Govenment?",
-        "Who called the Black Panther Party 'one of the greatest threats to nation's internal security?",
-        "Who shot and killed Black Panther Party members as they slept?",
-        "Who were the Black Panther Party members shot and killed as they slept?",
-        "Around 100 bullets were fired in this 'fierce gun battle' with police. How many were fired by Black Panthers?",
-        "When did the Black Panther Party dissolve?"
-    ];
-
-    // create an array of correct trivia answers
-    var rightAnswers = [
-        
-        
-        "",
-        "Matthew Johnson",
-        "San Francisco Police Department",
-        "Black Panther Party for Self-Defense",
-        "10 Points",
-        "Marxist",
-        "Free breakfast",
-        "Free health clinics",
-        "Thirteen",
-        "1969",
-        "J. Edgar Hoover",
-        "Chicago Police",
-        "Fred Hampton and Mark Clark",
-        "One bullet",
-        "1982"
-    ];
-
-    // create an array of wrong trivia answers
-    var wrongAnswers = [
-        "1965", 
-    ]
 
     // need a for loop to loop thru the questions
     // need a math.random() to randomize the questions
