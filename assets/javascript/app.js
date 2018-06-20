@@ -247,7 +247,7 @@ $(document).ready( function(){
     // displaying to the uer that they answered correctly and increasing correct score by 1
     function answerCorrect() {
         correct++;
-        $('.youWin').addClass('show').html("<p class='text-center'>Correct!<br>" + "<span style='color:white'>Answer: " + questionArray[index].answer + "</span></p>");
+        $('.youWin').addClass('show').html("<p class='text-center'>Correct!<br>" + "<span style='color:white'>answer: &nbsp;" + questionArray[index].answer + "</span></p>");
         $('.youWin').removeClass('hide');
         $('.youLose').addClass('hide');
         $('.youLose').removeClass('show');
@@ -258,7 +258,7 @@ $(document).ready( function(){
     // displaying to the uer that they did not answer correctly and increasing wrong score by 1
     function answerWrong() {
         wrong++;
-        $('.youLose').addClass('show').html("<p class='text-center'>Wakanda answer was that?<br>" + "<span style='color:white'>Answer: " + questionArray[index].answer + "</span></p>");
+        $('.youLose').addClass('show').html("<p class='text-center'>Wakanda answer was that?<br>" + "<span style='color:white'>answer: &nbsp;" + questionArray[index].answer + "</span></p>");
         $('.youLose').removeClass('hide');
         $('.youWin').addClass('hide');
         $('.youWin').removeClass('show');
