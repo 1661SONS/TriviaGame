@@ -33,8 +33,8 @@ $(document).ready( function(){
             
             // when timer expires, reset it and load a new question
             else {
-                index++;
                 answerWrong();
+                index++;
                 countdownTimer.reset();
                 if (index < questionArray.length) {
                     loadQuestion(index);
