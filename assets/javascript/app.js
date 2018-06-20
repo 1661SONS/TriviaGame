@@ -228,10 +228,10 @@ $(document).ready( function(){
         console.log(questionSelection);
         countdownTimer.reset();
         $(".question").html("<h3>" + questionArray[questionSelection].question + "</h3>");
-        $("#buttonA").blur().text(questionArray[questionSelection].choices[0]).show();
-        $("#buttonB").blur().text(questionArray[questionSelection].choices[1]).show();
-        $("#buttonC").blur().text(questionArray[questionSelection].choices[2]).show();
-        $("#buttonD").blur().text(questionArray[questionSelection].choices[3]).show();
+        $("#buttonA").text(questionArray[questionSelection].choices[0]).show();
+        $("#buttonB").text(questionArray[questionSelection].choices[1]).show();
+        $("#buttonC").text(questionArray[questionSelection].choices[2]).show();
+        $("#buttonD").text(questionArray[questionSelection].choices[3]).show();
     }
 
     // adding click event to start button, start timer and load question
