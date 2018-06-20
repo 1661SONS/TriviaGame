@@ -327,7 +327,7 @@ $(document).ready( function(){
     // need to end game or refresh page when timer reaches 0
     // need to remove auto-focus when a new question has loaded - an answer selection is being focussed on without the user input
         // i think i did this with .blur();
-        // never mind .. it's still happening
+        // never mind .blur(); did not work
     
 // closing document.ready function below
 });

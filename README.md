@@ -1,4 +1,4 @@
-# Trivia Game
+# Black Panther Party Themed Trivia Game
 
 ### Unit 5 Homework Assignment
 
