@@ -2,13 +2,10 @@
 
 ### Unit 5 Homework Assignment
 
-* You'll create a trivia game that shows only one question until the player answers it or their time runs out.
+* When "Start Trivia" is clicked, a 30-second timer will begin counting down, one question will display and 4 multiple choice potential answers will also display. There are a total of 26 questions in the game.
 
-* If the player selects the correct answer, show a screen congratulating them for choosing the right option. After a few seconds, display the next question -- do this without user input.
+* If the user selects the correct answer, they will be alerted "Correct!" via a pop-up and a nice blue "Correct!" banner. After dimissing the alert pop-up, another round will begin with the next question and a new 30-second timer counting down.
 
-* The scenario is similar for wrong answers and time-outs.
+* If the user selects the wrong answer, they will be alerted "Incorrect!" via pop-up and a not-so-nice white banner with red text.
 
-  * If the player runs out of time, tell the player that time's up and display the correct answer. Wait a few seconds, then show the next question.
-  * If the player chooses the wrong answer, tell the player they selected the wrong option and then display the correct answer. Wait a few seconds, then show the next question.
-
-* On the final screen, show the number of correct answers, incorrect answers, and an option to restart the game (without reloading the page).
+* Once the user has gone through all of the questions, their score will display: # of right answers and # of wrong answers.
