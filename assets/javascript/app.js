@@ -233,20 +233,24 @@ $(document).ready( function(){
 
     function answerCorrect() {
         correct++;
+        $('.rightAnswer').toggleClass('hide');
+        $('.wrongAnswer').addClass('hide');
         alert("Correct!");
         console.log("correct");
     }
 
     function answerWrong() {
         wrong++;
+        $('.wrongAnswer').toggleClass('hide');
+        $('.rightAnswer').addClass('hide');
         alert("Incorrect!");
         console.log("wrong");
     }
 
     function showScore() {
         $('.question').empty();
-        $('.question').append("<h2><p>You got" + correct + " right</p></h2>");
-        $('.question').append("<h2><p>You got" + wrong + " wrong</p></h2>");
+        $('.question').append("<h2 class='countRightAnswers'><p>Right Answers: " + correct + "</p></h2>");
+        $('.question').append("<h2 class='countWrongAnswers'><p>Wrong Answers: " + wrong + "</p></h2>");
         countdownTimer.stop();
         $('.timer').empty();
     }
