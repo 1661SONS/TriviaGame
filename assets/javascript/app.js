@@ -258,7 +258,7 @@ $(document).ready( function(){
     // displaying to the uer that they did not answer correctly and increasing wrong score by 1
     function answerWrong() {
         wrong++;
-        $('.youLose').addClass('show').html("<p class='text-center'>Wakanda answer was that?<br>" + "<span style='color:white'>answer: &nbsp;" + questionArray[index].answer + "</span></p>");
+        $('.youLose').addClass('show').html("<p class='text-center'>Wakanda answer was that?<br>" + "<span style='color:white'>correct answer: &nbsp;" + questionArray[index].answer + "</span></p>");
         $('.youLose').removeClass('hide');
         $('.youWin').addClass('hide');
         $('.youWin').removeClass('show');
