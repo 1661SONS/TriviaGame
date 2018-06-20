@@ -29,6 +29,11 @@ $(document).ready( function(){
                 $('.timer').html('<h3>' + countdownTimer.time + ' seconds remaining!</h3>')
             }
 
+            // trying to get the score to show when the timer expires - this is not working
+            // else if (countdownTimer.time = 0) {
+            //     showScore();
+            // }
+            
             // loading a new question even if the user got the answer wrong (as long as the countdown has not expired)
             else {
                 index++;
@@ -170,7 +175,7 @@ $(document).ready( function(){
     var q20 = {
         question: 'How many free health clinics did the Black Panthers operate?',
         choices: ['A. ten', 'B. eleven', 'C. twelve', 'D. thirteen'],
-        flags: [false, false, true, false],
+        flags: [false, false, false, true],
         answer: 'thirteen'
     }
     var q21 = {
@@ -223,10 +228,10 @@ $(document).ready( function(){
         console.log(questionSelection);
         countdownTimer.reset();
         $(".question").html("<h3>" + questionArray[questionSelection].question + "</h3>");
-        $("#buttonA").text(questionArray[questionSelection].choices[0]).show();
-        $("#buttonB").text(questionArray[questionSelection].choices[1]).show();
-        $("#buttonC").text(questionArray[questionSelection].choices[2]).show();
-        $("#buttonD").text(questionArray[questionSelection].choices[3]).show();
+        $("#buttonA").text(questionArray[questionSelection].choices[0]).show().blur();
+        $("#buttonB").text(questionArray[questionSelection].choices[1]).show().blur();
+        $("#buttonC").text(questionArray[questionSelection].choices[2]).show().blur();
+        $("#buttonD").text(questionArray[questionSelection].choices[3]).show().blur();
     }
 
     // adding click event to start button, start timer and load question
@@ -320,6 +325,8 @@ $(document).ready( function(){
 
     // need a 2-second wait period after user is notified if answer is correct or wrong .. maybe?
     // need to end game or refresh page when timer reaches 0
+    // need to remove auto-focus when a new question has loaded - an answer selection is being focussed on without the user input
+        // i think i did this with .blur();
     
-// close ready function below
+// closing document.ready function below
 });
