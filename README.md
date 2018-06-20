@@ -9,3 +9,5 @@
 * If the user selects the wrong answer, they will be alerted "Incorrect!" via pop-up and a not-so-nice white banner with red text.
 
 * Once the user has gone through all of the questions, their score will display: # of right answers and # of wrong answers.
+
+** TRIVIA ANSWERS SOURCE: https://www.history.com/topics/black-panthers

@@ -1,3 +1,5 @@
+// TRIVIA ANSERS SOURCE: https://www.history.com/topics/black-panthers
+
 $(document).ready( function(){
 
     // declaring function for 30-second timer
@@ -28,23 +30,17 @@ $(document).ready( function(){
             if (countdownTimer.time >= 0) {
                 $('.timer').html('<h3>' + countdownTimer.time + ' seconds remaining!</h3>')
             }
-
-            // trying to get the score to show when the timer expires - this is not working
-            // else if (countdownTimer.time = 0) {
-            //     showScore();
-            // }
             
-            // loading a new question even if the user got the answer wrong (as long as the countdown has not expired)
+            // when timer expires, reset it and load a new question
             else {
                 index++;
-                wrongAnswer();
+                answerWrong();
                 countdownTimer.reset();
                 if (index < questionArray.length) {
                     loadQuestion(index);
                 }
 
-                // if the countdown has expired, end the game and display the score
-                    // this doesn't seem to be working
+                // if no questions remain after the timer has expired, end the game and display the score
                 else {
                     $('.chosenAnswer').hide();
                     showScore();
@@ -324,7 +320,7 @@ $(document).ready( function(){
     });
 
     // need a 2-second wait period after user is notified if answer is correct or wrong .. maybe?
-    // need to end game or refresh page when timer reaches 0
+    // it would be nice to have some sorta pause button
     // need to remove auto-focus when a new question has loaded - an answer selection is being focussed on without the user input
         // i think i did this with .blur();
         // never mind .blur(); did not work
