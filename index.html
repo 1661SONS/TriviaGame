@@ -12,11 +12,37 @@
 </head>
 <body>
     <div class="container">
+
     <div class="row text-center">
         <div class="logo"></div>
         <!-- <h1 class="col-md-12">BPP Trivia</h1> -->
-        <p class="col-md-12">How well do you know the real Black Panthers?<br>Let's play trivia to find out!</p>
+        <p class="col-md-12">How well do you know the real Black Panthers?</p>
+
+        <div class="question col-md-12">
+            <button id="startButton" class="btn btn-primary btn-lg">Start Trivia</button>
+        </div>
     </div>
+
+    <div class="row">
+
+        <div class="timer text-center col-md-12"></div>
+        
+        <div class="answers col-md-12 text-center">
+            <div>
+                <button class="answerChoice btn btn-outline-light" id="buttonA"><h4>A</h4></button>
+            </div>
+            <div>
+                <button class="answerChoice btn btn-outline-light" id="buttonB"><h4>B</h4></button>
+            </div>
+            <div>
+                <button class="answerChoice btn btn-outline-light" id="buttonC"><h4>C</h4></button>
+            </div>
+            <div>
+                <button class="answerChoice btn btn-outline-light" id="buttonD"><h4>D</h4></button>
+            </div>
+        </div>
+    </div>
+
     <div class="row wrongAnswer">
         <div class="col-md-12 text-center">
             <h1>Wakanda answer was that!?</h1>

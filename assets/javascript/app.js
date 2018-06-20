@@ -154,9 +154,9 @@ $(document).ready( function(){
     }
     var q20 = {
         question: 'How many free health clinics did the Black Panthers operate?',
-        choices: ['A. ', 'B. ', 'C. thirteen', 'D. '],
+        choices: ['A. ten', 'B. eleven', 'C. twelve', 'D. thirteen'],
         flags: [false, false, true, false],
-        answer: 'C. thirteen'
+        answer: 'D. thirteen'
     }
     var q21 = {
         question: 'When did the FBI declare the Black Panther Party an emeny of the US Govenment?',
@@ -174,7 +174,7 @@ $(document).ready( function(){
         question: 'Who shot and killed Black Panther Party members as they slept?',
         choices: ['A. rogue FBI agents', 'B. jealous BPP members', 'C. trained assassins', 'D. Chicago PD'],
         flags: [false, false, false, true],
-        answer: 'D. Chicago PD'
+        answer: 'D. Chicago Police'
     }
     var q24 = {
         question: 'Who were the Black Panther Party members shot and killed as they slept?',
@@ -209,7 +209,7 @@ $(document).ready( function(){
 
     function setup() {
         index = 0;
-        $('.question').append('<button id="startButton">Start</button>');
+        // $('.question').append('<button class="btn btn-primary" id="startButton">Start</button>');
         $('#startButton').on('click', function() {
             $(this).hide();
             countdownTimer.start();
@@ -218,7 +218,7 @@ $(document).ready( function(){
     }
 
     function getAnswer() {
-        $('.answerchoice').on('click', function() {
+        $('.answerChoice').on('click', function() {
             console.log('alert', index);
             index++;
             console.log('click', index);
@@ -245,14 +245,14 @@ $(document).ready( function(){
 
     function showScore() {
         $('.question').empty();
-        $('.question').append("<h2><p>" + correct + " correct</p></h2>");
-        $('.question').append("<h2><p>" + wrong + " incorrect</p></h2>");
+        $('.question').append("<h2><p>You got" + correct + " right</p></h2>");
+        $('.question').append("<h2><p>You got" + wrong + " wrong</p></h2>");
         countdownTimer.stop();
         $('.timer').empty();
     }
     setup();    
 
-    $('.answerchoice').on('click', function() {
+    $('.answerChoice').on('click', function() {
         console.log($(this));
         if(this.id == 'buttonA') {
             var answerChosen = 'A';
@@ -293,12 +293,12 @@ $(document).ready( function(){
         if (index < questionArray.length) {
             loadQuestion(index);
         } else {
-            $(".answerchoice").hide();
+            $(".answerChoice").hide();
             showScore();
         }
        });
-       
-       });
+
+    //    });
     
 
     // need a for loop to loop thru the questions
