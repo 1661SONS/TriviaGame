@@ -228,10 +228,10 @@ $(document).ready( function(){
         console.log(questionSelection);
         countdownTimer.reset();
         $(".question").html("<h3>" + questionArray[questionSelection].question + "</h3>");
-        $("#buttonA").text(questionArray[questionSelection].choices[0]).show().blur();
-        $("#buttonB").text(questionArray[questionSelection].choices[1]).show().blur();
-        $("#buttonC").text(questionArray[questionSelection].choices[2]).show().blur();
-        $("#buttonD").text(questionArray[questionSelection].choices[3]).show().blur();
+        $("#buttonA").blur().text(questionArray[questionSelection].choices[0]).show();
+        $("#buttonB").blur().text(questionArray[questionSelection].choices[1]).show();
+        $("#buttonC").blur().text(questionArray[questionSelection].choices[2]).show();
+        $("#buttonD").blur().text(questionArray[questionSelection].choices[3]).show();
     }
 
     // adding click event to start button, start timer and load question
@@ -327,6 +327,7 @@ $(document).ready( function(){
     // need to end game or refresh page when timer reaches 0
     // need to remove auto-focus when a new question has loaded - an answer selection is being focussed on without the user input
         // i think i did this with .blur();
+        // never mind .. it's still happening
     
 // closing document.ready function below
 });
