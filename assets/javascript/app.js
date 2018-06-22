@@ -56,157 +56,157 @@ $(document).ready( function(){
     // declaring 26 questions and their data as variables
     var q1 = {
         question: 'What year was the Black Panther Party founded?',
-        choices: ['A. 1965','B. 1966','C. 1967','D. 1968'],
+        choices: ['1965','1966','1967','1968'],
         flags: [false, true, false, false],
         answer: '1966'
     };
     var q2 = {
         question: 'In what city was the Black Panther Party established?',
-        choices: ['A. Los Angeles', 'B. San Francisco', 'C. Oakland', 'D. San Diego'],
+        choices: ['Los Angeles', 'San Francisco', 'Oakland', 'San Diego'],
         flags: [false, false, true, false],
         answer: 'Oakland'
     }
     var q3 = {
         question: 'What was the core mission of the Black Panther Party?',
-        choices: ['A. defend against police brutality', 'B. elect more African Americans', 'C. compete with the Nation of Islam', 'D. frame police officers'],
+        choices: ['defend against police brutality', 'elect more African Americans', 'compete with the Nation of Islam', 'frame police officers'],
         flags: [true, false, false, false],
         answer: 'defend against police brutality'
     }
     var q4 = {
         question: 'At its peak, how many members did the Black Panther Party have?',
-        choices: ['A. 1500', 'B. 3000', 'C. 2000', 'D. 2500'],
+        choices: ['1,500', '3,000', '2,000', '2,500'],
         flags: [false, false, true, false],
-        answer: '2000'
+        answer: '2,000'
     }
     var q5 = {
         question: 'What does COINTELPRO stand for?',
-        choices: ['A. co-intelligence telephone program', 'B. counterintelligence program', 'C. counterintelligence telephone program', 'D. co-intelligence program'],
+        choices: ['Co-Intelligence Telephone Program', 'Counterintelligence Program', 'Counterintelligence Telephone Program', 'Co-Intelligence Program'],
         flags: [false, true, false, true],
-        answer: 'counterintelligence program'
+        answer: 'Counterintelligence Program'
     }
     var q6 = {
         question: 'What federal organization used COINTELPRO against the Black Panther Party?',
-        choices: ['A. CIA', 'B. ATF', 'C. NSA', 'D. FBI'],
+        choices: ['CIA', 'ATF', 'NSA', 'FBI'],
         flags: [false, false, false, true],
         answer: 'FBI'
     }
     var q7 = {
         question: 'Who founded the Black Panther Party?',
-        choices: ['A. Huey & Riley Freeman', 'B. Huey Newton & Bobby Seale', 'C. Huey Newton & Barry Seal ', 'D. Huey Newton & Bobby Brown'],
+        choices: ['Huey & Riley Freeman', 'Huey Newton & Bobby Seale', 'Huey Newton & Barry Seal ', 'Huey Newton & Bobby Brown'],
         flags: [false, true, false, false],
         answer: 'Huey Newton & Bobby Seale'
     }
     var q8 = {
         question: 'When did the founders of the Black Panther Party meet?',
-        choices: ['A. 1961', 'B. 1960', 'C. 1962', 'D. 1959'],
+        choices: ['1961', '1960', '1962', '1959'],
         flags: [true, false, false, false],
         answer: '1961'
     }
     var q9 = {
         question: 'Where did the founders of the Black Panther Party meet?',
-        choices: ['A. Mills College', 'B. College of Alameda', 'C. Merritt College', 'D. Berkeley City College'],
+        choices: ['Mills College', 'College of Alameda', 'Merritt College', 'Berkeley City College'],
         flags: [false, false, true, false],
         answer: 'Merritt College'
     }
     var q10 = {
         question: 'What group did the founders form before the Black Panther Party?',
-        choices: ['A. United Negro College Fund', 'B. Negro History Fact Group', 'C. Free Negro Food Program', 'D. Free Negro Health Clinic'],
+        choices: ['United Negro College Fund', 'Negro History Fact Group', 'Free Negro Food Program', 'Free Negro Health Clinic'],
         flags: [false, true, false, false],
         answer: 'Negro History Fact Group'
     }
     var q11 = {
         question: 'Which assassination contributed to the founding of the Black Panther Party?',
-        choices: ['A. John F. Kennedy', 'B. Dr. Martin Luther King, Jr.', 'C. Robert Kennedy', 'D. Malcolm X'],
+        choices: ['John F. Kennedy', 'Dr. Martin Luther King, Jr.', 'Robert Kennedy', 'Malcolm X.'],
         flags: [false, false, false, true],
-        answer: 'Malcolm X'
+        answer: 'Malcolm X.'
     }
     var q12 = {
         question: "Who was the unarmed Black teen killed by police before the Black Panther Party's founding?",
-        choices: ['A. Mark Jones', 'B. Matt Jackson', 'C. Matthew Johnson', 'D. Max Jacobs'],
+        choices: ['Mark Jones', 'Matt Jackson', 'Matthew Johnson', 'Max Jacobs'],
         flags: [false, false, true, false],
         answer: 'Matthew Johnson'
     }
     var q13 = {
         question: 'Which police department was responsible for the death of the unarmed Black teen?',
-        choices: ['A. San Francisco PD', 'B. Oakland PD', 'C. Los Angeles PD', 'D. San Diego PD'],
+        choices: ['San Francisco PD', 'Oakland PD', 'Los Angeles PD', 'San Diego PD'],
         flags: [true, false, false, false],
         answer: 'San Francisco PD'
     }
     var q14 = {
         question: 'What was the original name of the Black Panther Party?',
-        choices: ['A. Black Panther Party for Black Power', 'B. Black Panther Party for Civil Rights', 'C. Black Panther Party for Self-Defense', 'D. Black Panther Party for Equal Justice'],
+        choices: ['Black Panther Party for Black Power', 'Black Panther Party for Civil Rights', 'Black Panther Party for Self-Defense', 'Black Panther Party for Equal Justice'],
         flags: [false, false, true, false],
         answer: 'Black Panther Party for Self-Defense'
     }
     var q15 = {
         question: "Which was the Black Panther Party's furthest urban center?",
-        choices: ['A. Los Angeles', 'B. Chicago', 'C. Philadelphia', 'D. New York'],
+        choices: ['Los Angeles', 'Chicago', 'Philadelphia', 'New York'],
         flags: [false, false, false, true],
         answer: 'New York'
     }
     var q16 = {
         question: "How many points did the Black Panther Party's social programs follow?",
-        choices: ['A. 10 Points', 'B. 5 Points', 'C. 3 Points', 'D. 7 Points'],
+        choices: ['10 Points', '5 Points', '3 Points', '7 Points'],
         flags: [true, false, false, false],
         answer: '10 Points'
     }
     var q17 = {
         question: 'What kind of ideology did the Black Panther Party follow?',
-        choices: ['A. Communist', 'B. Marxist', 'C. Capitalist', 'D. Anarchist'],
+        choices: ['Communist', 'Marxist', 'Capitalist', 'Anarchist'],
         flags: [false, true, false, false],
         answer: 'Marxist'
     }
     var q18 = {
         question: 'What kind of free services did the Black Panthers run for children?',
-        choices: ['A. free breakfast', 'B. free mentoring', 'C. free weapons training', 'D. free books'],
+        choices: ['free breakfast', 'free mentoring', 'free weapons training', 'free books'],
         flags: [true, false, false, false],
         answer: 'free breakfast'
     }
     var q19 = {
         question: 'What kind of free services did the Black Panthers run for the community?',
-        choices: ['A. free library', 'B. free clothing drive', 'C. free jobs training', 'D. free health clinics'],
+        choices: ['free library', 'free clothing drive', 'free jobs training', 'free health clinics'],
         flags: [false, false, false, true],
         answer: 'free health clinics'
     }
     var q20 = {
         question: 'How many free health clinics did the Black Panthers operate?',
-        choices: ['A. ten', 'B. eleven', 'C. twelve', 'D. thirteen'],
+        choices: ['ten', 'eleven', 'twelve', 'thirteen'],
         flags: [false, false, false, true],
         answer: 'thirteen'
     }
     var q21 = {
         question: 'When did the FBI declare the Black Panther Party an emeny of the US Government?',
-        choices: ['A. 1966', 'B. 1969', 'C. 1968', 'D. 1970'],
+        choices: ['1966', '1969', '1968', '1970'],
         flags: [false, true, false, false],
         answer: '1969'
     }
     var q22 = {
-        question: "Who called the Black Panther Party 'one of the greatest threats to nation's internal security?",
-        choices: ['A. J. Edgar Hoover', 'B. Harry S. Truman', 'C. Byron Todd Jones', 'D. Rex D. Davis'],
+        question: "Who called the Black Panther Party 'one of the greatest threats to nation's internal security'?",
+        choices: ['J. Edgar Hoover', 'Harry S. Truman', 'Byron Todd Jones', 'Rex D. Davis'],
         flags: [true, false, false, false],
         answer: 'J. Edgar Hoover'
     }
     var q23 = {
         question: 'Who shot and killed Black Panther Party members as they slept?',
-        choices: ['A. rogue FBI agents', 'B. jealous BPP members', 'C. trained assassins', 'D. Chicago PD'],
+        choices: ['rogue FBI agents', 'jealous BPP members', 'trained assassins', 'Chicago Police'],
         flags: [false, false, false, true],
         answer: 'Chicago Police'
     }
     var q24 = {
         question: 'Who were the Black Panther Party members shot and killed as they slept?',
-        choices: ['A. Fred Hampton & Bobby Seale', 'B. Fred Hampton & Eldridge Cleaver', 'C. Fred Hampton & Mark Clark', 'D. Fred Hampton & Stokely Carmichael'],
+        choices: ['Fred Hampton & Bobby Seale', 'Fred Hampton & Eldridge Cleaver', 'Fred Hampton & Mark Clark', 'Fred Hampton & Stokely Carmichael'],
         flags: [false, false, true, false],
         answer: 'Fred Hampton & Mark Clark'
     }
     var q25 = {
         question: "Around 100 bullets were fired in this 'fierce gun battle' with police. How many were fired by Black Panthers?",
-        choices: ['A. none', 'B. about half', 'C. just one', 'D. all 100'],
+        choices: ['none', 'about half', 'just one', 'all 100'],
         flags: [false, false, true, false],
         answer: 'just one'
     }
     var q26 = {
         question: 'When did the Black Panther Party dissolve?',
-        choices: ['A. 1982', 'B. 1969', 'C. 1980', 'D. 1972'],
+        choices: ['1982', '1969', '1980', '1972'],
         flags: [true, false, false, false],
         answer: '1982'
     }
