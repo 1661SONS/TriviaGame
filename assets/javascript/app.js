@@ -199,7 +199,7 @@ $(document).ready( function(){
         answer: 'Fred Hampton & Mark Clark'
     }
     var q25 = {
-        question: "Around 100 bullets were fired in this 'fierce gun battle' with police. How many were fired by Black Panthers?",
+        question: "Black Panthers fired how many of the 100 bullets in this 'fierce gun battle' with police?",
         choices: ['none', 'about half', 'just one', 'all 100'],
         flags: [false, false, true, false],
         answer: 'just one'
@@ -217,6 +217,12 @@ $(document).ready( function(){
     // hiding youLose and youWin divs on default
     $('.youLose').addClass('hide');
     $('.youWin').addClass('hide');
+
+    // hide the multiple choice buttons until Start Trivia button is clicked
+    $('#buttonA, #buttonB, #buttonC, #buttonD').hide();
+
+    // hide play again button on default 
+    $('#replayButton').hide();
 
     // loading a question and reset the timer every time a new question is loaded
     // also loading the question's corresponding data (choices)
@@ -237,6 +243,7 @@ $(document).ready( function(){
             $(this).hide();
             countdownTimer.start();
             loadQuestion(index);
+            $('.howWell').hide();
         });
     }
 
@@ -269,8 +276,13 @@ $(document).ready( function(){
         $('.question').append("<h2 class='countWrongAnswers'><p>Wrong Answers: " + wrong + "</p></h2>");
         countdownTimer.stop();
         $('.timer').empty();
+        $('#replayButton').show();
     }
-    setup();    
+    setup();
+    
+    $('#replayButton').on('click', function() {
+        location.reload();
+    });
 
     // doing some matchy matchy with the user's chosen answer vs the correct answer in the questions array
     $('.answerChoice').on('click', function() {

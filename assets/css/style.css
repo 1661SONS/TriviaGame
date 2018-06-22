@@ -42,10 +42,10 @@ body {
 .howWell {
     color: darkgrey;
 }
-p {
+p, .question {
     margin-top: 1rem;
 }
-#startButton, .timer, .btn-outline-light {
+#startButton, .timer, .btn-outline-light, #replayButton {
     margin-bottom: 1rem;
 }
 .timer, .countRightAnswers {
