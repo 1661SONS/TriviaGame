@@ -175,7 +175,7 @@ $(document).ready( function(){
         answer: 'thirteen'
     }
     var q21 = {
-        question: 'When did the FBI declare the Black Panther Party an emeny of the US Government?',
+        question: 'When did the FBI declare the Black Panther Party an enemy of the US Government?',
         choices: ['1966', '1969', '1968', '1970'],
         flags: [false, true, false, false],
         answer: '1969'
